@@ -2,9 +2,8 @@
 import { useState, Children, useCallback } from "react";
 
 import {galleryList} from "../assets/data.js"
-import { Card } from "../components/Card.jsx";
 import { Header } from "../components/Header.jsx";
-
+import { Card } from "../components/Card.jsx";
 
 export const Gallery = () => {
   const [images, setImages] = useState(galleryList);

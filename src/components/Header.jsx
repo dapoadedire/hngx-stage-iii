@@ -23,10 +23,8 @@ export const Header = () => {
                 </SignedOut>
 
                 <SignedIn>
-
                     <Link to="/gallery">Gallery</Link>
                 </SignedIn>
-                
             </nav>
         </header>
     );

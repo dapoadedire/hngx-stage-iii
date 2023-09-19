@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useDrag, useDrop } from "react-dnd";
 import { useRef } from "react";
+import { TagsContainer } from "./TagsContainer.jsx";
 export const Card = ({ src, title, id, index, moveImage, tags }) => {
     const ref = useRef(null);
 
@@ -58,19 +59,6 @@ export const Card = ({ src, title, id, index, moveImage, tags }) => {
         <div ref={ref} style={{ opacity }} className="card">
             <img src={src} alt={title} />
             <TagsContainer tags={tags} />
-        </div>
-    );
-};
-
-
-const TagsContainer = ({ tags }) => {
-    return (
-        <div className="tags-container">
-            {tags.map((tag) => (
-                <span key={tag} className="tag">
-                    {tag}
-                </span>
-            ))}
         </div>
     );
 };

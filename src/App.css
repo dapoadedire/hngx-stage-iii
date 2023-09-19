@@ -246,3 +246,26 @@ nav > * {
   font-family: 'Space Mono', monospace;
   cursor: pointer;
 }
+
+
+.welcome-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+
+.welcome-container h2{
+  font-size: 2rem;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 1em;
+}
+
+.welcome-container p{
+  font-size: 1rem;
+  font-family: 'Space Mono', monospace;
+  margin-bottom: 1em;
+}
