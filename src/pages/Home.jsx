@@ -1,11 +1,16 @@
-import { Link } from "react-router-dom";
+import { Header } from "../components/Header";
 
 export const Home = () => {
     return (
         <div>
-        <h1>Home</h1>
-        <Link to="/gallery">Gallery</Link>
-        
+        <Header />
+        <section>
+            <h1>Home</h1>
+
+            <p>
+                Welcome to Gallerie, a place to share your photos with the world.
+            </p>
+        </section>
         </div>
     );
     };
