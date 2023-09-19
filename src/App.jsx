@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { BrowserRouter as Router, Route, Routes, useNavigate  } from "react-router-dom";
 import {
   ClerkProvider,
@@ -67,29 +67,4 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
