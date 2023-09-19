@@ -7,34 +7,15 @@ import {
   RedirectToSignIn,
   SignIn,
   SignUp,
-  UserButton,
 } from "@clerk/clerk-react";
+import "./App.css";
+
+import { Home } from "./pages/Home";
+import {Gallery} from "./pages/Gallery";
 
 
 const clerkPublishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-import "./App.css";
-
-
-
-
-function PublicPage() {
-  return (
-    <>
-      <h1>Public page</h1>
-      <a href="/protected">Go to protected page</a>
-    </>
-  );
-}
- 
-function ProtectedPage() {
-  return (
-    <>
-      <h1>Protected page</h1>
-      <UserButton />
-    </>
-  );
-}
 
 
 
@@ -47,7 +28,7 @@ function ClerkProviderWithRoutes() {
       navigate={(to) => navigate(to)}
     >
       <Routes>
-        <Route path="/" element={<PublicPage />} />
+        <Route path="/" element={<Home />} />
         <Route
           path="/sign-in/*"
           element={<SignIn routing="path" path="/sign-in" />}
@@ -57,11 +38,11 @@ function ClerkProviderWithRoutes() {
           element={<SignUp routing="path" path="/sign-up" />}
         />
         <Route
-          path="/protected"
+          path="/gallery"
           element={
           <>
             <SignedIn>
-              <ProtectedPage />
+              <Gallery />
             </SignedIn>
              <SignedOut>
               <RedirectToSignIn />
