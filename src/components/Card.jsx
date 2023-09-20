@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { TagsContainer } from "./TagsContainer.jsx";
 export const Card = ({ src, title, id, index, moveImage, tags }) => {
     const ref = useRef(null);
+    
 
     const [, drop] = useDrop({
         accept: "image",
