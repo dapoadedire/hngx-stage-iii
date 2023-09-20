@@ -34,13 +34,13 @@ To run this project, you will need to add the following environment variables to
 Clone the project
 
 ```bash
-  git clone hhttps://github.com/dapoadedire/hngx-stage-ii.git
+  git clone hhttps://github.com/dapoadedire/hngx-stage-iii.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd hngx-stage-ii 
+  cd hngx-stage-iii 
 ```
 
 Install dependencies
