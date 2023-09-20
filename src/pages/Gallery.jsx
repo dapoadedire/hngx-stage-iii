@@ -20,24 +20,21 @@ export const Gallery = () => {
     }, []);
 
     const handleSearch = (e) => {
-      e.preventDefault();
-      
-      const filteredImages = galleryList.filter((image) =>
-        image.tags.join(" ").includes(searchQuery)
-        
-      );
-      setImages(filteredImages);
+        e.preventDefault();
+
+        const filteredImages = galleryList.filter((image) =>
+            image.tags.join(" ").includes(searchQuery.toLowerCase())
+        );
+        setImages(filteredImages);
     };
-    
 
     const handleInputChange = (e) => {
         const inputValue = e.target.value;
         setSearchQuery(inputValue);
 
         const filteredImages = galleryList.filter((image) =>
-        image.tags.join(" ").includes(searchQuery)
-        
-      );
+            image.tags.join(" ").includes(inputValue.toLowerCase())
+        );
 
         if (inputValue === "") {
             // If the input is empty, show all images
